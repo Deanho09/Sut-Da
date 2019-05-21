@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shutda">
+
     <uses-permission android:name="android.permission.INTERNET" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -26,17 +27,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".view.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_main"
-            android:theme="@style/FullscreenTheme"
-            android:screenOrientation="sensorLandscape"></activity>
-
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".view.SignUpActivity"
             android:screenOrientation="landscape"
+            android:theme="@style/LoginActivityTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.MenuActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/LoginActivityTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.JogboActivity"
+            android:label="@string/title_activity_jogbo"
             android:theme="@style/LoginActivityTheme"
             android:windowSoftInputMode="adjustResize" />
     </application>

@@ -197,6 +197,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         startActivity(loginIntent);
     }
 
+    private void sendToMenu() {
+        Intent loginIntent = new Intent(LoginActivity.this, MenuActivity.class);
+        startActivity(loginIntent);
+    }
+
     private void newUserRegisteration() {
         Intent SignUpIntent = new Intent ( LoginActivity.this, SignUpActivity.class);
         startActivity(SignUpIntent);
@@ -293,7 +298,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                                 public void onSuccess(Void aVoid) {
 
                                     showProgress(true);
-                                    sendToMain();
+                                    sendToMenu();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -584,7 +589,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                                 @Override
                                 public void onSuccess(Void aVoid) {
 
-                                    sendToMain();
+                                    sendToMenu();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override

@@ -27,4 +27,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="dummy_button">Back to SignIn</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_jogbo">JogboActivity</string>
 </resources>
